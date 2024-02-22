@@ -10,5 +10,19 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    reviewers:
-      - "michfiore"
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: daily
+    groups:
+      all-major:
+        patterns:
+          - "*"
+        update-types:
+        - "major"
+      all-minor:
+        patterns:
+          - "*"
+        update-types:
+        - "minor"
+        - "patch"
